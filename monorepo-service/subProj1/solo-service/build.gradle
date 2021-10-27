@@ -1,0 +1,19 @@
+apply plugin: "io.spinnaker.plugin.service-extension"
+apply plugin: "maven-publish"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    annotationProcessor("org.pf4j:pf4j:$pf4jVersion")
+
+    compileOnly("com.netflix.spinnaker.kork:kork-plugins-api:$korkVersion")
+    compileOnly("com.netflix.spinnaker.orca:orca-api:$orcaVersion")
+
+    // implementation("com.something.my.plugin.needs:dependency:version")
+}
+
+spinnakerPlugin {
+    serviceName = "Solo.service"
+    pluginClass = "io.armory.plugin.stage.wait.random.RandomWaitPlugin"
+}
