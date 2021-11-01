@@ -1,0 +1,9 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'monorepo'
+
+include ':plugin-1', ':plugin-1:random-wait-deck', ':plugin-1:random-wait-orca', ':plugin-2', ':plugin-2:random-wait-deck', ':plugin-2:random-wait-orca'

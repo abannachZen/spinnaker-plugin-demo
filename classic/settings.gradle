@@ -1,0 +1,10 @@
+pluginManagement {
+  repositories {
+    mavenLocal()
+    gradlePluginPortal()
+  }
+}
+
+rootProject.name = "classic"
+
+include "random-wait-orca", "random-wait-deck"
