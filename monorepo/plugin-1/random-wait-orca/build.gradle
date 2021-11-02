@@ -11,6 +11,8 @@ buildscript {
 }
 
 apply plugin: "io.spinnaker.plugin.service-extension"
+// TODO(abannachZen): Currently repos don't contain all versions of the boms
+//apply plugin: "io.spinnaker.plugin.compatibility-test-runner"
 apply plugin: "maven-publish"
 apply plugin: "kotlin"
 apply plugin: "kotlin-kapt"
